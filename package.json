@@ -1,0 +1,56 @@
+{
+    "name": "zeus",
+    "version": "0.0.1",
+    "main": "index.js",
+    "repository": "https://github.com/znamilya/zeus.git",
+    "author": "Ilya Znamensky <znamilya@yandex.ru>",
+    "license": "MIT",
+    "scripts": {
+        "test": "NODE_PATH=src jest",
+        "test:watch": "NODE_PATH=src jest --watch"
+    },
+    "jest": {
+        "testRegex": "/tests/.*\\.spec\\.js$",
+        "setupFiles": [
+            "<rootDir>/jest.setup"
+        ],
+        "setupTestFrameworkScriptFile": "jest-extended",
+        "transform": {
+            "^.+\\.js$": "babel-jest"
+        }
+    },
+    "prettier": {
+        "printWidth": 100,
+        "trailingComma": "all",
+        "singleQuote": true,
+        "tabWidth": 4,
+        "jsxBracketSameLine": false
+    },
+    "dependencies": {
+        "dot-prop-immutable": "^1.4.0",
+        "webpack": "^4.16.0"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-jest": "^23.4.0",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
+        "jest": "^23.4.0",
+        "jest-extended": "^0.7.2",
+        "normalizr": "^3.2.4",
+        "react": "^16.4.1",
+        "react-dom": "^16.4.1",
+        "redux-saga": "^0.16.0",
+        "reselect": "^3.0.1"
+    },
+    "peerDependencies": {
+        "normalizr": "^3.2.4",
+        "react": "^16.4.1",
+        "react-dom": "^16.4.1",
+        "redux-saga": "^0.16.0",
+        "reselect": "^3.0.1"
+    }
+}
